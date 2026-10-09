@@ -1,0 +1,11 @@
+Average Height
+  = CALCULATE( AVERAGE('low-bridges 1 2'[measure]), 'low-bridges 1 2'[uom] = "m", 'low-bridges 1 2'[restriction_type] = "maximum height" )
+
+  Count Bridges Over Road
+  = CALCULATE( COUNTROWS('low-bridges 1 2'), 'low-bridges 1 2'[structure] = "Bridge Over Road" )
+
+  Total Restrictions
+  = COUNTROWS ( 'low-bridges 1 2')
+
+  Lowest Height
+  = CALCULATE( MIN('low-bridges 1 2'[measure]), 'low-bridges 1 2'[uom] = "m", 'low-bridges 1 2'[restriction_type] = "maximum height")
